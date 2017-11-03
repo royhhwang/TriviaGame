@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="jumbotron">
+        <h1>Qu Qu Quzu Trivia</h1>
+    </div>
+    <br>
+
+    <div id="counter" style="text-align: center;">
+        <button id="count-down">Start Quiz!</button>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <form>
+        <h2>What is the most sold fruit in the US?</h2>
+        <br>
+
+        <input type="radio" name="question1" class="right-answer" value="banana">Banana
+        <input type="radio" name="question1" value="apple">Apple
+        <input type="radio" name="question1" value="strawberry">Strawberry
+        <input type="radio" name="question1" value="Coconut">Coconut
+        <input type="radio" name="question1" value="Mango">Mango
+    </form>
+
+    <br>
+    <br>
+    <br>
+
+    <form>
+        <h2>Choose the largest freshwater lake in the world?</h2>
+        <br>
+
+        <input type="radio" name="question2" value="lakemichigan">Lake Michigan
+        <input type="radio" name="question2" value="lakehuron">Lake Huron
+        <input type="radio" name="question2" value="lakeerie">Lake Erie
+        <input type="radio" name="question2" class="right-answer" value="lakesuperior">Lake Superior
+        <input type="radio" name="question2" value="lakeontario">Lake Ontario
+    </form>
+
+    <br>
+    <br>
+    <br>
+
+    <form>
+        <h2>What is the diameter of Earth?</h2>
+        <br>
+
+        <input type="radio" name="question3" value="10000km">10,000 km
+        <input type="radio" name="question3" class="right-answer" value="7917mi">7,917.5 mi
+        <input type="radio" name="question3" value="31804400ft">31,804,400 ft
+        <input type="radio" name="question3" value="18741981m">18,741,981.1 m
+        <input type="radio" name="question3" value="12in">12 in
+    </form>
+
+    <br>
+    <br>
+    <br>
+
+    <form>
+        <h2>Choose the world's largest ocean.</h2>
+        <br>
+
+        <input type="radio" name="question4" value="atlantic">Atlantic
+        <input type="radio" name="question4" value="indian">Indian
+        <input type="radio" name="question4" class="right-answer" value="pacific">Pacific
+        <input type="radio" name="question4" value="arctic">Arctic
+        <input type="radio" name="question4" value="southern">Southern
+    </form>
+
+    <br>
+    <br>
+    <br>
+
+    <form>
+        <h2>Which is the world's longest river?</h2>
+        <br>
+
+        <input type="radio" name="question5" value="yangtze">Yangtze
+        <input type="radio" name="question5" value="yenisei">Yenisei
+        <input type="radio" name="question5" value="yellow">Yellow
+        <input type="radio" name="question5" value="nile">Nile
+        <input type="radio" name="question5" class="right-answer" value="amazon">Amazon
+    </form>
+
+    <br>
+    <br>
+    <br>
+
+    <form>
+        <h2>Who played Neo in The Matrix?</h2>
+        <br>
+
+        <input type="radio" name="question6" value="peele">Jordan Peele
+        <input type="radio" name="question6" value="fishburne">Lawrence Fishburne
+        <input type="radio" name="question6" value="weaving">Hugo Weaving
+        <input type="radio" name="question6" value="helmut">Helmut Bakaitis
+        <input type="radio" name="question6" class="right-answer" value="keanu">Keanu Reeves
+    </form>
+
+    <br>
+    <br>
+    <br>
+
+    <form>
+        <h2>What is the painting 'La Gioconda' more usually known as?</h2>
+        <br>
+
+        <input type="radio" name="question7" class="right-answer" value="monalisa">Mona Lisa
+        <input type="radio" name="question7" value="whistler">Whistler's Mother
+        <input type="radio" name="question7" value="madamex">Madame X
+        <input type="radio" name="question7" value="dora">Portrait of Dora Maar
+        <input type="radio" name="question7" value="parasol">Woman with a Parasol
+    </form>
+
+    <br>
+    <br>
+    <br>
+
+    <form>
+        <h2>Who was the wife of King Louis XVI?</h2>
+        <br>
+
+        <input type="radio" name="question8" value="chanel">Coco Chanel
+        <input type="radio" name="question8" value="curie">Marie Curie
+        <input type="radio" name="question8" class="right-answer" value="marie">Maria Antonia
+        <input type="radio" name="question8" value="claudel">Camille Claudel
+        <input type="radio" name="question8" value="darc">Joan of Arc
+    </form>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div id="results-button" style="text-align: center;">
+        <button>Submit</button>
+    </div>
+
+    <br>
+    <br>
+
+    <script type="text/javascript">
+
+        var countValue = 94;
+        $("#count-down").click(function () {
+            var countStopper = setInterval(function () {
+                countValue--;
+                if (countValue <= 0) {
+                    clearInterval(countStopper);
+                    console.log(countStopper);
+                }
+
+                if (countValue >= 92) {
+                    $("#counter").html("<h3>Get ready...</h3");
+                }
+                else if (countValue == 91) {
+                    $("#counter").html("<h3>GO!</h3");
+                }
+                else {
+                    $("#counter").html("<h3>Time Remaining: " + countValue + "</h3>");
+                }
+            }, 1000);
+        });
+
+        var rightAnswers = 0;
+        var wrongAnswers = 0;
+
+        $("#results-button").click(function () {
+            if (document.querySelector('input[type=radio][name=question1][class=right-answer]').checked == true) {
+                rightAnswers = rightAnswers + 1;
+                console.log(rightAnswers);
+            }
+            if (document.querySelector('input[type=radio][name=question2][class=right-answer]').checked == true) {
+                rightAnswers = rightAnswers + 1;
+                console.log(rightAnswers);
+            }
+            if (document.querySelector('input[type=radio][name=question3][class=right-answer]').checked == true) {
+                rightAnswers = rightAnswers + 1;
+                console.log(rightAnswers);
+            }
+            if (document.querySelector('input[type=radio][name=question4][class=right-answer]').checked == true) {
+                rightAnswers = rightAnswers + 1;
+                console.log(rightAnswers);
+            }
+            if (document.querySelector('input[type=radio][name=question5][class=right-answer]').checked == true) {
+                rightAnswers = rightAnswers + 1;
+                console.log(rightAnswers);
+            }
+            if (document.querySelector('input[type=radio][name=question6][class=right-answer]').checked == true) {
+                rightAnswers = rightAnswers + 1;
+                console.log(rightAnswers);
+            }
+            if (document.querySelector('input[type=radio][name=question7][class=right-answer]').checked == true) {
+                rightAnswers = rightAnswers + 1;
+                console.log(rightAnswers);
+            }
+            if (document.querySelector('input[type=radio][name=question8][class=right-answer]').checked == true) {
+                rightAnswers = rightAnswers + 1;
+                console.log(rightAnswers);
+            }
+            alert("You got " + rightAnswers + "/8 correct!");
+        });
+
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

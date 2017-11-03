@@ -1,0 +1,34 @@
+body {
+    background:url(../images/memphis-colorful.png);
+    font-family: Georgia, 'Times New Roman', Times;
+}
+
+#count-down {
+    padding:8px;
+    font-size: 45px;
+}
+
+h3 {
+    padding:8px;
+    font-size: 45px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.jumbotron {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+input[type="radio"]{
+    margin: 0 10px 0 10px;
+
+}
